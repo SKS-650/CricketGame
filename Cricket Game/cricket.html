@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="cricket.css">
+</head>
+<body class="whole-body">
+  <div class="main-container">
+    <h1>Cricket Game</h1>
+    <h3>(Bat Ball Stump Game)</h3><br>
+
+    <button class="button" onclick="
+      const userChoice1 = 'Bat';
+      const userChoiceMsg = 'You have choosen: ' + userChoice1;
+
+      const randomNumber = Math.random() * 3;
+      let computerChoice;
+
+      if(randomNumber <= 1){
+        computerChoice = 'Bat';
+      } else if(randomNumber <= 2){
+        computerChoice = 'Ball';
+      } else{
+        computerChoice = 'Stump';
+      }
+
+      const computerChoiceMsg = `Computer choice is: ${computerChoice}`;
+
+      let resultMsg;
+      if(computerChoice === 'Bat'){
+        resultMsg = `It's tie.`;
+      } else if(computerChoice === 'Ball'){
+        resultMsg = 'You won.';
+      } else {
+        resultMsg = 'Computer won.';
+      }
+
+      result = `${userChoiceMsg}.            \n${computerChoiceMsg}.            \nso, ${resultMsg}`;
+      currentDisplay = result ;         
+      document.querySelector('#display').value =currentDisplay;
+    ">Bat</button>
+
+    <button class="button" onclick="
+      const userChoice2 = 'Ball';
+      const userChoiceMsg = 'You have choosen: ' + userChoice2;
+
+      const randomNumber = Math.random() * 3;
+      let computerChoice;
+
+      if(randomNumber <= 1){
+        computerChoice = 'Bat';
+      } else if(randomNumber <= 2){
+        computerChoice = 'Ball';
+      } else{
+        computerChoice = 'Stump';
+      }
+
+      const computerChoiceMsg = `Computer choice is: ${computerChoice}`;
+
+      let resultMsg;
+      if(computerChoice === 'Bat'){
+        resultMsg = 'Computer won.';
+      } else if(computerChoice === 'Ball'){
+        resultMsg = `It's tie.`;
+      } else {
+        resultMsg = 'You won.';
+      }
+
+      result = `${userChoiceMsg}.           \n${computerChoiceMsg}.          \nso, ${resultMsg}`;
+      currentDisplay = result ;         
+      document.querySelector('#display').value =currentDisplay;    ">Ball</button>
+
+    <button class="button" onclick="
+      const userChoice3 = 'Stump';
+      const userChoiceMsg = 'You have choosen: ' + userChoice3;
+
+      const randomNumber = Math.random() * 3;
+      let computerChoice;
+
+      if(randomNumber <= 1){
+        computerChoice = 'Bat';
+      } else if(randomNumber <= 2){
+        computerChoice = 'Ball';
+      } else{
+        computerChoice = 'Stump';
+      }
+
+      const computerChoiceMsg = `Computer choice is: ${computerChoice}`;
+
+      let resultMsg;
+      if(computerChoice === 'Bat'){
+        resultMsg = 'You won.';
+      } else if(computerChoice === 'Ball'){
+        resultMsg = 'Computer won.';
+      } else {
+        resultMsg = `It's tie.`;
+      }
+
+      result = `${userChoiceMsg}.           \n${computerChoiceMsg}.        \nso, ${resultMsg}`;
+      currentDisplay = result ;         
+      document.querySelector('#display').value =currentDisplay; 
+    ">Stump</button><br>
+
+    <input type="text" id="display" readonly>
+  </div>
+
+  <script>
+    let currentDisplay = 'Click any above button to play the game';
+    document.querySelector('#display').value =currentDisplay;
+  </script>
+</body>
+</html>
